@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+  rabbitmq:
+     image: rabbitmq:3-management
+     container_name: local-rabbitmq
+     hostname: rabbitmq
+     restart: unless-stopped
+     environment:
+       - RABBITMQ_DEFAULT_USER=guest
+       - RABBITMQ_DEFAULT_PASS=guest
+       - RABBITMQ_DEFAULT_VHOST=/
+     ports:
+       # AMQP protocol port
+       - '5672:5672'
+       # HTTP management UI
+       - '15672:15672'
