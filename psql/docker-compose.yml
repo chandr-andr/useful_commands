@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  psql14tdb:
+    image: timescale/timescaledb:latest-pg14
+    container_name: local-psql14tdb
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+    ports:
+       - '5432:5432'
