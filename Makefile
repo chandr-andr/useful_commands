@@ -9,6 +9,6 @@ runrmq:
 runredis: 
 	docker compose -f /Users/aleksandrkiselev/Projects/useful_commands/redis/docker-compose.yml up -d
 
-.PHONY: 
-runpsql: envfile
+.PHONY: runpsql
+runpsql:
 	docker compose -f /Users/aleksandrkiselev/Projects/useful_commands/psql/docker-compose.yml up -d
